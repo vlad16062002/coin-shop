@@ -2,13 +2,16 @@
   "name": "coinmarket",
   "version": "1.0.0",
   "description": "",
+  "homepage": "./",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
     "pack": "npx webpack --mode development",
     "build": "npx webpack --mode production",
-    "watch": "npx webpack --mode development --watch"
+    "watch": "npx webpack --mode development --watch",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [
     "vk",
@@ -38,6 +41,7 @@
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "express-validator": "^6.4.0",
+    "gh-pages": "^3.1.0",
     "mongoose": "^5.8.11",
     "node-fetch": "^2.6.0",
     "node-vkcoinapi": "^1.8.0",
